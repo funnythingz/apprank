@@ -1,0 +1,19 @@
+{
+  "name": "apprank",
+  "version": "0.0.0",
+  "description": "apprank",
+  "author": "sugimo",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-ts": "latest",
+    "grunt-contrib-uglify": "",
+    "grunt-contrib-clean": "",
+    "grunt-contrib-watch": "",
+    "grunt-contrib-sass": "",
+    "grunt-contrib-compass": "",
+    "grunt-contrib-concat": "",
+    "grunt-contrib-connect": "",
+    "grunt-contrib-copy": ""
+  }
+}
