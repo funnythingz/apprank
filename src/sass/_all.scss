@@ -162,27 +162,6 @@ section h3{
   );
 }
 
-.contents li:last-child.current{
-  float:left;
-  width:63px;
-  height:40px;
-  padding:20px 0 18px;
-  color:#fff;
-  font-size:14px;
-  font-weight:bold;
-  line-height:0;
-  text-align:center;
-  margin:0;
-  text-shadow: 0 -1px 0 #aaa;
-    background: -moz-linear-gradient(
-    top, #d1d2d3 0%, #c1c2c3
-  );
-  background: -webkit-gradient(
-    linear,left top,left bottom,
-    from(#d1d2d3),
-    to(#c1c2c3)
-  );
-}
 
 section{
   border-bottom:1px solid #e7e8e9;
