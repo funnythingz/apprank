@@ -7,14 +7,14 @@
 /* body */
 
 body {
-  font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-family:sans-serif;
   font-size:16px;
   line-height:1.4;
   margin: 0;
   padding: 0;
   width: 100%;
   min-width: 320px !important;
-  background: #f7f8f9;
+  background-color: #f7f8f9;
   color:#345;
   overflow-x: hidden;
   -webkit-text-size-adjust: none;
@@ -24,13 +24,24 @@ a{
   text-decoration:none;
 }
 
-/* Headline */
-
-.contents header h1{
-  float:right;
-  margin:0;
-  padding:0;
+/* Header */
+.header{
+  position:relative;
+    .logo{
+      color:transparent;
+      position:absolute;
+      top:0;
+      left:50%;
+      width:150px;
+      height:50px;
+      margin:0 0 0 -75px;
+      padding:0;
+      background-image:url("../img/logo@2x.png");
+      @include background-size(150px 50px);
+      @include inline-block();
+    }
 }
+
 
 .contents h2{
   background: -moz-linear-gradient(
@@ -106,12 +117,9 @@ section h3{
 .contents ul{
   list-style:none;
   border-bottom:1px solid #d1d2d3;
-  margin:0;
-  padding:0;
-  overflow-y:hidden;
-  overflow-x:auto;
-  height:40px;
   width:100%;
+  display:table;
+  table-layout:fixed;
   background: -moz-linear-gradient(
     top, #fff 0%, #e7e8e9
   );
@@ -123,16 +131,18 @@ section h3{
 }
 
 .contents li{
-  float:left;
-  width:63px;
+  color:#789;
+  overflow-y:hidden;
   padding:20px 0 18px;
   font-size:14px;
   font-weight:bold;
   line-height:0;
   text-align:center;
+  display:table-cell;
   border-right:1px solid #e1e2e3;
   margin:0;
   text-shadow: 0 1px 0 #fff;
+  cursor:pointer;
 }
 
 .contents li:last-child{
@@ -140,17 +150,7 @@ section h3{
 }
 
 .contents li.current{
-  float:left;
-  width:63px;
-  height:40px;
-  padding:20px 0 18px;
   color:#fff;
-  font-size:14px;
-  font-weight:bold;
-  line-height:0;
-  text-align:center;
-  border-right:1px solid #e1e2e3;
-  margin:0;
   text-shadow: 0 -1px 0 #aaa;
     background: -moz-linear-gradient(
     top, #d1d2d3 0%, #c1c2c3
@@ -269,7 +269,7 @@ section p{
   background-size:20px 20px;
 }
 
-.currentU{
+.universalMenu li.currentU{
   background:url("../img/btn_select_on@2x.png") no-repeat left 10px;
   background-size:20px 20px;
 }

@@ -1,113 +1,86 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="ja">
 <head>
-
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
-<meta name="apple-mobile-web-app-capable" content="no">
-<meta name="format-detection" content="telephone=no">
-<meta name="format-detection" content="address=no">
-<meta name="keywords" content="iOS,iPhone,アップル,apple,アプリ,app,ランキング,ranking,トップセールス,トップ無料,トップ有料,無料アプリ,有料アプリ,無料,有料,gross,free,スマートフォン">
-<meta name="description" content="AppRank | iPhone/iOSアプリランキングはスマートフォンで世界中のAppStoreランキングがブラウザで見れる便利ツール">
-<meta property="og:title" content="AppRank | iPhone/iOSアプリランキング" />
-<meta property="og:type" content="article" />
-<meta property="og:description" content="AppRank | iPhone/iOSアプリランキングはスマートフォンで世界中のAppStoreランキングがブラウザで見れる便利ツール" />
-<meta property="og:url" content="http://www.apprank.kenjisugimoto.com/" />
-<meta property="og:image" content="http://www.apprank.kenjisugimoto.com/img/icon.png" />
-<meta property="og:site_name" content="AppRank | iPhone/iOSアプリランキング" />
-<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
-<link rel="apple-touch-icon-precomposed" href="img/favicon.png">
-<title>[速報]AppRank | iPhone/iOSアプリランキング</title>
-
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script type="text/javascript">
-  var country ="jp";
-	var type = "topgrossingapplications";
-	var genrecode = "";
-</script>
-<script type="text/javascript" src="js/apprank.js"></script>
-<link href="css/style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript">
-//google analytics
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-389726-8']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <meta name="apple-mobile-web-app-capable" content="no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="address=no">
+  <title>[速報]AppRank | iPhone/iOSアプリランキング</title>
+  <meta name="keywords" content="iOS,iPhone,アップル,apple,アプリ,app,ランキング,ranking,トップセールス,トップ無料,トップ有料,無料アプリ,有料アプリ,無料,有料,gross,free,スマートフォン">
+  <meta name="description" content="AppRank | iPhone/iOSアプリランキングはスマートフォンで世界中のAppStoreランキングがブラウザで見れる便利ツール">
+  <meta property="og:title" content="AppRank | iPhone/iOSアプリランキング" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="AppRank | iPhone/iOSアプリランキングはスマートフォンで世界中のAppStoreランキングがブラウザで見れる便利ツール" />
+  <meta property="og:url" content="http://www.apprank.kenjisugimoto.com/" />
+  <meta property="og:image" content="http://www.apprank.kenjisugimoto.com/img/icon.png" />
+  <meta property="og:site_name" content="AppRank | iPhone/iOSアプリランキング" />
+  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="img/favicon.png">
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
 
 
 <body>
 <div id="wrapper" class="wrapper">
 
-<div id="universalMenu" class="universalMenu">
-<h2>フィードタイプ</h2>
-<ul id="feed">
-<li id="feedFree">トップ無料</li>
-<li id="feedPaid">トップ有料</li>
-<li id="feedGross" class="currentU">トップセールス</li>
-</ul>
-
-<h2>表示件数</h2>
-<ul id="displayNum">
-<li id="displayNum100" class="currentU">100</li>
-<li id="displayNum300">300</li>
-</ul>
-
-<h2>カテゴリ</h2>
-<select name="select" id="genreChanger" class="genreChanger">
-<option value="">すべて</option>
-<option value="6022">カタログ</option>
-<option value="6016">エンターテイメント</option>
-<option value="6017">教育</option>
-<option value="6014">ゲーム</option>
-<option value="6013">ヘルスケア/フィットネス</option>
-<option value="6007">仕事効率化</option>
-<option value="6008">写真/ビデオ</option>
-<option value="6004">スポーツ</option>
-<option value="6006">辞書/辞典/その他</option>
-<option value="6001">天気</option>
-<option value="6010">ナビゲーション</option>
-<option value="6009">ニュース</option>
-<option value="6021">Newsstand</option>
-<option value="6000">ビジネス</option>
-<option value="6018">ブック</option>
-<option value="6005">ソーシャルネットワーキング</option>
-<option value="6015">ファイナンス</option>
-<option value="6011">ミュージック</option>
-<option value="6020">医学</option>
-<option value="6012">ライフスタイル</option>
-<option value="6003">旅行</option>
-<option value="6023">フード/ドリンク</option>
-<option value="6002">ユーティリティ</option>
-
-</select>
-
-<div class="Uad">
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-4410803951131804";
-/* apprank-half */
-google_ad_slot = "9768396915";
-google_ad_width = 234;
-google_ad_height = 60;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-<!-- //Uad --></div>
-
-
-<!-- //universalMenu --></div>
+<nav id="universalMenu" class="universalMenu">
+  <h2>フィードタイプ</h2>
+  <ul id="feed">
+  <li id="feedFree">トップ無料</li>
+  <li id="feedPaid">トップ有料</li>
+  <li id="feedGross" class="currentU">トップセールス</li>
+  </ul>
+  <h2>表示件数</h2>
+    <ul id="displayNum">
+    <li id="displayNum100" class="currentU">100</li>
+    <li id="displayNum300">300</li>
+  </ul>
+  <h2>カテゴリ</h2>
+  <select name="select" id="genreChanger" class="genreChanger">
+    <option value="">すべて</option>
+    <option value="6022">カタログ</option>
+    <option value="6016">エンターテイメント</option>
+    <option value="6017">教育</option>
+    <option value="6014">ゲーム</option>
+    <option value="6013">ヘルスケア/フィットネス</option>
+    <option value="6007">仕事効率化</option>
+    <option value="6008">写真/ビデオ</option>
+    <option value="6004">スポーツ</option>
+    <option value="6006">辞書/辞典/その他</option>
+    <option value="6001">天気</option>
+    <option value="6010">ナビゲーション</option>
+    <option value="6009">ニュース</option>
+    <option value="6021">Newsstand</option>
+    <option value="6000">ビジネス</option>
+    <option value="6018">ブック</option>
+    <option value="6005">ソーシャルネットワーキング</option>
+    <option value="6015">ファイナンス</option>
+    <option value="6011">ミュージック</option>
+    <option value="6020">医学</option>
+    <option value="6012">ライフスタイル</option>
+    <option value="6003">旅行</option>
+    <option value="6023">フード/ドリンク</option>
+    <option value="6002">ユーティリティ</option>
+  </select>
+  <div class="Uad">
+  <script type="text/javascript"><!--
+  google_ad_client = "ca-pub-4410803951131804";
+  /* apprank-half */
+  google_ad_slot = "9768396915";
+  google_ad_width = 234;
+  google_ad_height = 60;
+  //-->
+  </script>
+  <script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+  </script>
+  <!-- //Uad --></div>
+</nav>
 
 <div class="contents">
-<header>
-<h1><img src="img/header_logo@2x.png" width="150" /></h1>
+<header class="header">
+<h1 class="logo">AppRank</h1>
 <a id="slideBtn" class="slideBtn switcherOFF"></a>
 </header>
 <ul id="countryList" class="countryList">
@@ -151,6 +124,27 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 </div>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/apprank.js"></script>
+<script type="text/javascript">
+  var country ="jp";
+  var type = "topgrossingapplications";
+  var genrecode = "";
+</script>
+
+<script type="text/javascript">
+//google analytics
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-389726-8']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
 
 </body>
 </html>
