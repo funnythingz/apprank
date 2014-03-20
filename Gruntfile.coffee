@@ -31,4 +31,4 @@ module.exports = (grunt)->
   grunt.loadNpmTasks('grunt-contrib-watch')
   grunt.loadNpmTasks('grunt-contrib-clean')
 
-  grunt.registerTask('default', [ 'concat', 'uglify', 'compass'])
+  grunt.registerTask('default', [ 'uglify', 'compass'])

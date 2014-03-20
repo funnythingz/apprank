@@ -19,82 +19,21 @@ body {
   overflow-x: hidden;
   -webkit-text-size-adjust: none;
 }
-
-a{
-  text-decoration:none;
-}
-
-/* Headline */
-
-.contents header h1{
-  float:right;
-  margin:0;
-  padding:0;
-}
-
-.contents h2{
-  background: -moz-linear-gradient(
-    top, #f7f8f9 0%, #eee
-  );
-  background: -webkit-gradient(
-    linear,left top,left bottom,
-    from(#f7f8f9),
-    to(#eee)
-  );
-  font-size:12px;
-  font-weight:bold;
-  border-top:1px solid #fff;
-  border-bottom:1px solid #ddd;
-  padding:8px 10px;
-  margin:0;
-}
-
-section h3{
-  font-size:100%;
-  line-height:1;
-  color:#334455;
-  overflow: hidden;
-  text-overflow:ellipsis;
-  white-space: nowrap;
-  width:220px;
-  margin:0;
-  padding:0;
-  font-weight:bold;
-}
-
-@media(min-width: 800px) {
-  section h3{
-    font-size:120%;
-    width:50%;
-  }
-}
-
-.universalMenu h2{
-  font-size:12px;
-  font-weight:bold;
-  margin:0 10px;
-  padding:5px 0;
-  border-bottom:1px solid #222;
-  text-shadow: 0 -1px 0 #000;
-}
-
-/* Contents */
-
-.contents{
+div#contents{
   width:100%;
   position:absolute;
   top:0;
   left:250px;
 }
 
-.contents header{
+div#contents header{
   background-color: #66bb00;
   height:49px;
   border-bottom:1px solid #55aa11;
   position:relative;
 }
 
-.slideBtn{
+div#contents header a#slideBtn{
   display:block;
   width:49px;
   height:49px;
@@ -103,7 +42,13 @@ section h3{
   float:left;
 }
 
-.contents ul{
+div#contents header h1{
+  float:right;
+  margin:0;
+  padding:0;
+}
+
+div#contents ul{
   list-style:none;
   border-bottom:1px solid #d1d2d3;
   margin:0;
@@ -122,7 +67,7 @@ section h3{
   );
 }
 
-.contents li{
+div#contents li{
   float:left;
   width:63px;
   padding:20px 0 18px;
@@ -135,11 +80,11 @@ section h3{
   text-shadow: 0 1px 0 #fff;
 }
 
-.contents li:last-child{
+div#contents li:last-child{
   border-right:none;
 }
 
-.contents li.current{
+div#contents li.current{
   float:left;
   width:63px;
   height:40px;
@@ -162,7 +107,7 @@ section h3{
   );
 }
 
-.contents li:last-child.current{
+div#contents li:last-child.current{
   float:left;
   width:63px;
   height:40px;
@@ -184,7 +129,29 @@ section h3{
   );
 }
 
-section{
+div#contents h2{
+  background: -moz-linear-gradient(
+    top, #f7f8f9 0%, #eee
+  );
+  background: -webkit-gradient(
+    linear,left top,left bottom,
+    from(#f7f8f9),
+    to(#eee)
+  );
+  font-size:12px;
+  font-weight:bold;
+  border-top:1px solid #fff;
+  border-bottom:1px solid #ddd;
+  padding:8px 10px;
+  margin:0;
+  
+}
+
+div#contents div#target a{
+  text-decoration:none;
+}
+
+div#contents section{
   border-bottom:1px solid #e7e8e9;
   border-top:1px solid #fff;
   padding:10px 0 10px 0;
@@ -194,7 +161,27 @@ section{
   width: 100%; /* for ie6 */
 }
 
-section img{
+div#contents section h3{
+  font-size:100%;
+  line-height:1;
+  color:#334455;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  width:220px;
+  margin:0;
+  padding:0;
+  font-weight:bold;
+}
+
+@media(min-width: 800px) {
+  div#contents section h3{
+    font-size:120%;
+    width:50%;
+  }
+}
+
+div#contents section img{
   float:left;
   margin:0 10px;
   border-radius:10px;
@@ -202,65 +189,81 @@ section img{
 }
 
 @media(min-width: 800px) {
-  section img{
+  div#contents section img{
     width: 80px;
   }
 }
 
-.caset{
+div#contents section div.contents{
   margin-left:70px;
 }
 
-section p{
+div#contents section p{
   margin:5px 0 0;
   line-height:1;
   font-size:12px;
   color:#aaa;
 }
 
-.target{
+div#target{
   margin-bottom: 50px;
 }
 
 @media(min-width: 500px) { 
-  .target { margin-bottom: 60px; } 
+  div#target { margin-bottom: 60px; } 
 }
 
 @media(min-width: 800px) {
-  .target { margin-bottom: 90px; } 
+  div#target { margin-bottom: 90px; } 
 }
 
-.recomend a{
+div#recomend a{
   text-decoration:none;
 }
 
-.recomend section{
+div#recomend section{
   background:none;
+}
+
+div#sfb{
+  text-align:center;
+  margin-bottom:20px;
 }
 
 /**/
 
-.wrapper{
+div#wrapper{
   width:100%;
   position:relative;
   top:0;
   left:-250px;
 }
 
-.universalMenu{
+div#universalMenu{
   background-color: #333;
   width:250px;
   overflow-y:auto;
   color:#fff;
 }
 
-.universalMenu ul{
+
+div#universalMenu h2{
+  font-size:12px;
+  font-weight:bold;
+  margin:0 10px;
+  padding:5px 0;
+  border-bottom:1px solid #222;
+  text-shadow: 0 -1px 0 #000;
+}
+
+div#universalMenu ul{
   margin:0 10px;
   padding:0;
   list-style:none;
 }
 
-.universalMenu li{
+
+div#universalMenu li{
   padding:10px 0 10px 25px;
   font-size:16px;
   font-weight:bold;
@@ -269,23 +272,23 @@ section p{
   background-size:20px 20px;
 }
 
-.currentU{
+div#universalMenu li.currentU{
   background:url("../img/btn_select_on@2x.png") no-repeat left 10px;
   background-size:20px 20px;
 }
 
-.genreChanger{
+div#universalMenu #genreChanger{
   margin:5px 10px 0;
   width:210px;
   padding:3px;
 }
 
-.Uad{
+div#Uad{
   padding-top:10px;
 }
 
 /**/
-.loading{
+div#loading{
   width:100%;
   text-align:center;
   padding:50px 0;

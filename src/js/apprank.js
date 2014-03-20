@@ -29,7 +29,7 @@ function core(){
 		$("#target").append(
 		"<a href='" + json.feed.entry[i]["id"]["label"] + '&at=11l4Yj' +//URL
 		"'><section id='t"+ parseInt(i+1)+"'><img src='" + json.feed.entry[i]["im:image"][2]["label"] +"' width='50' />" + //ランク
-		"<div class='contents'><h3>" + parseInt(i+1) + "位."  +//画像
+		"<div class='caset'><h3>" + parseInt(i+1) + "位."  +//画像
 		json.feed.entry[i]["im:name"]["label"] + 
 		"</h3><p>"+ json.feed.entry[i]["im:artist"]["label"] + "</p><p>"+ json.feed.entry[i]["im:price"]["label"] + "</p></div></section></a>");//名称
 		}
