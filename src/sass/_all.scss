@@ -67,6 +67,7 @@ a{
   background:url("../img/header_icon@2x.png") no-repeat center center;
   @include background-size(49px 49px);
   float:left;
+  cursor:pointer;
 }
 
 
@@ -93,16 +94,16 @@ a{
       list-style:none;
     }
     .feed li{
-      padding:10px 0 10px 25px;
+      padding:8px 0 8px 25px;
       font-size:16px;
       font-weight:bold;
       text-shadow: 0 -1px 0 #000;
-      background:url("../img/btn_select_off@2x.png") no-repeat left 10px;
+      background:url("../img/btn_select_off@2x.png") no-repeat left 8px;
       @include background-size(20px 20px);
       cursor:pointer;
     }
     .feed li.currentU{
-      background:url("../img/btn_select_on@2x.png") no-repeat left 10px;
+      background:url("../img/btn_select_on@2x.png") no-repeat left 8px;
       @include background-size(20px 20px);
     }
     .genreChanger{
@@ -205,13 +206,14 @@ a{
   float:left;
   width:50px;
   margin:0 10px;
-  @include border-radius(16px);
+  @include border-radius(10px);
   border:1px solid #e7e8e9;
 }
 
 @media(min-width: 800px) {
   .icon{
     width:72px;
+    @include border-radius(16px);
   }
 }
 

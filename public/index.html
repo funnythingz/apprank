@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, minimal-ui" />
   <meta name="apple-mobile-web-app-capable" content="no">
   <meta name="format-detection" content="telephone=no">
   <meta name="format-detection" content="address=no">
@@ -27,11 +27,10 @@
   </script>
 </head>
 
-
 <body>
 <header class="header">
   <h1 class="logo">AppRank iPhone/iOSランキング</h1>
-  <button id="slideBtn" class="slideBtn switcherOFF">Menu</button>
+  <a id="slideBtn" class="slideBtn switcherOFF" onClick="javascript: _gaq.push(['_trackEvent','umclick', 'click', 'umClick'])">Menu</a>
 </header>
 
 <div id="container" class="container">
@@ -148,6 +147,21 @@
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
+</script>
+
+<script type='text/javascript'>
+jQuery(function() {
+    /* click tracking google ana */
+    jQuery('a').click(function(e) {
+        var ahref = jQuery(this).attr('href');
+        if (ahref.indexOf('http://apprank.kenjisugimoto.com/') != -1 || ahref.indexOf('http') == -1 ) {
+            _gaq.push(['_trackEvent', 'Inbound Links', 'Click', ahref]);
+        }
+        else {
+            _gaq.push(['_trackEvent', 'Outbound Links', 'Click', ahref]);
+        }
+    });
+});
 </script>
 
 </body>

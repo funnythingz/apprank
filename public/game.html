@@ -6,8 +6,8 @@
   <meta name="apple-mobile-web-app-capable" content="no">
   <meta name="format-detection" content="telephone=no">
   <meta name="format-detection" content="address=no">
-  <title>[仕事効率化]AppRank | iPhone/iOSアプリランキング</title>
-  <meta name="keywords" content="iOS,iPhone,アップル,apple,アプリ,app,ランキング,ranking,トップセールス,トップ無料,トップ有料,無料アプリ,有料アプリ,無料,有料,gross,free,スマートフォン,パズドラ,ガンホー,モンスト,mixi,">
+  <title>[ゲーム]AppRank | iPhone/iOSアプリランキング</title>
+  <meta name="keywords" content="iOS,iPhone,アップル,apple,アプリ,app,ゲーム,game,ランキング,ranking,トップセールス,トップ無料,トップ有料,無料アプリ,有料アプリ,無料,有料,gross,free,スマートフォン,パズドラ,ガンホー,モンスト,mixi,">
   <meta name="description" content="AppRank | iPhone/iOSアプリランキングはスマートフォンで世界中のAppStoreランキングがブラウザで見れる便利ツール">
   <meta property="og:title" content="AppRank | iPhone/iOSアプリランキング" />
   <meta property="og:type" content="article" />
@@ -22,8 +22,8 @@
   <script type="text/javascript" src="js/apprank.js"></script>
   <script type="text/javascript">
     var country ="jp";
-    var type = "topfreeapplications";
-    var genrecode = "6007";
+    var type = "topgrossingapplications";
+    var genrecode = "6014";
   </script>
 </head>
 
@@ -31,7 +31,7 @@
 <body>
 <header class="header">
   <div class="in">
-  <h1 class="logo">AppRank iPhone/iOSランキング</h1>
+  <h1 class="logo">AppRank iPhone/iOSゲームランキング</h1>
   <a id="slideBtn" class="slideBtn switcherOFF">Menu</a>
   </div>
 </header>
@@ -41,9 +41,9 @@
 <nav id="universalMenu" class="universalMenu">
   <h2 class="h2umType">フィードタイプ</h2>
   <ul id="feed" class="feed">
-  <li id="feedFree" class="currentU">トップ無料</li>
+  <li id="feedFree">トップ無料</li>
   <li id="feedPaid">トップ有料</li>
-  <li id="feedGross">トップセールス</li>
+  <li id="feedGross" class="currentU">トップセールス</li>
   </ul>
   <h2 class="h2umType">表示件数</h2>
     <ul id="displayNum" class="feed">
@@ -56,9 +56,9 @@
     <option value="6022">カタログ</option>
     <option value="6016">エンターテイメント</option>
     <option value="6017">教育</option>
-    <option value="6014">ゲーム</option>
+    <option value="6014" selected="">ゲーム</option>
     <option value="6013">ヘルスケア/フィットネス</option>
-    <option value="6007" selected="">仕事効率化</option>
+    <option value="6007">仕事効率化</option>
     <option value="6008">写真/ビデオ</option>
     <option value="6004">スポーツ</option>
     <option value="6006">辞書/辞典/その他</option>
