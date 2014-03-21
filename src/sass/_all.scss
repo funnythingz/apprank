@@ -2,9 +2,7 @@
 ---------------------------------------*/
 @import "compass";
 
-/*components*/
-
-/* body */
+/* all */
 
 body {
   font-family:sans-serif;
@@ -24,34 +22,103 @@ a{
   text-decoration:none;
 }
 
+/* container */
+.container{
+  width:100%;
+  position:relative;
+  top:50px;
+  left:-250px;
+}
+
 /* Header */
 .header{
-  position:relative;
-    .logo{
-      color:transparent;
-      position:absolute;
-      top:0;
-      left:50%;
-      width:150px;
-      height:50px;
-      margin:0 0 0 -75px;
-      padding:0;
-      background-image:url("../img/logo@2x.png");
-      @include background-size(150px 50px);
-      @include inline-block();
-    }
+  width:100%;
+  background-color: #66bb00;
+  height:49px;
+  border-bottom:1px solid #55aa11;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:100;
+}
+
+.logo{
+  color:transparent;
+  font-size:10px;
+  position:absolute;
+  top:0;
+  left:50%;
+  width:150px;
+  height:50px;
+  overflow-y:hidden;
+  margin:0 0 0 -75px;
+  padding:0;
+  background-image:url("../img/logo@2x.png");
+  @include background-size(150px 50px);
+  @include inline-block();
+}
+
+.slideBtn{
+  color:transparent;
+  display:block;
+  border:none;
+  width:49px;
+  height:49px;
+  background:url("../img/header_icon@2x.png") no-repeat center center;
+  @include background-size(49px 49px);
+  float:left;
 }
 
 
-.contents h2{
-  background: -moz-linear-gradient(
-    top, #f7f8f9 0%, #eee
-  );
-  background: -webkit-gradient(
-    linear,left top,left bottom,
-    from(#f7f8f9),
-    to(#eee)
-  );
+/* UM */
+.universalMenu{
+  background-color: #333;
+  width:250px;
+  overflow-y:auto;
+  color:#fff;
+  position:absolute;
+  top:0;
+  left:0;
+    .h2umType{
+      font-size:12px;
+      font-weight:bold;
+      margin:0 10px;
+      padding:5px 0;
+      border-bottom:1px solid #222;
+      text-shadow: 0 -1px 0 #000;
+    }
+    .feed{
+      margin:0 10px;
+      padding:0;
+      list-style:none;
+    }
+    .feed li{
+      padding:10px 0 10px 25px;
+      font-size:16px;
+      font-weight:bold;
+      text-shadow: 0 -1px 0 #000;
+      background:url("../img/btn_select_off@2x.png") no-repeat left 10px;
+      @include background-size(20px 20px);
+      cursor:pointer;
+    }
+    .feed li.currentU{
+      background:url("../img/btn_select_on@2x.png") no-repeat left 10px;
+      @include background-size(20px 20px);
+    }
+    .genreChanger{
+      margin:5px 10px 0;
+      width:210px;
+      padding:3px;
+    }
+    .Uad{
+      padding-top:10px;
+    }
+}
+
+/* Headline */
+
+.h2tl{
+  @include background-image(linear-gradient(#f7f8f9, #eee));
   font-size:12px;
   font-weight:bold;
   border-top:1px solid #fff;
@@ -60,7 +127,7 @@ a{
   margin:0;
 }
 
-section h3{
+.h3appName{
   font-size:100%;
   line-height:1;
   color:#334455;
@@ -74,19 +141,10 @@ section h3{
 }
 
 @media(min-width: 800px) {
-  section h3{
+  .appName{
     font-size:120%;
     width:50%;
   }
-}
-
-.universalMenu h2{
-  font-size:12px;
-  font-weight:bold;
-  margin:0 10px;
-  padding:5px 0;
-  border-bottom:1px solid #222;
-  text-shadow: 0 -1px 0 #000;
 }
 
 /* Contents */
@@ -98,41 +156,17 @@ section h3{
   left:250px;
 }
 
-.contents header{
-  background-color: #66bb00;
-  height:49px;
-  border-bottom:1px solid #55aa11;
-  position:relative;
-}
-
-.slideBtn{
-  display:block;
-  width:49px;
-  height:49px;
-  background:url("../img/header_icon@2x.png") no-repeat center center;
-  background-size:49px 49px;
-  float:left;
-}
-
-.contents ul{
+.countryList{
   list-style:none;
   border-bottom:1px solid #d1d2d3;
   width:100%;
   display:table;
   table-layout:fixed;
-  background: -moz-linear-gradient(
-    top, #fff 0%, #e7e8e9
-  );
-  background: -webkit-gradient(
-    linear,left top,left bottom,
-    from(#fff),
-    to(#e7e8e9)
-  );
+  @include background-image(linear-gradient(#fff, #e7e8e9));
 }
 
-.contents li{
+.countryList li{
   color:#789;
-  overflow-y:hidden;
   padding:20px 0 18px;
   font-size:14px;
   font-weight:bold;
@@ -145,52 +179,43 @@ section h3{
   cursor:pointer;
 }
 
-.contents li:last-child{
+.countryList li:last-child{
   border-right:none;
 }
 
-.contents li.current{
+.countryList li.current{
   color:#fff;
   text-shadow: 0 -1px 0 #aaa;
-    background: -moz-linear-gradient(
-    top, #d1d2d3 0%, #c1c2c3
-  );
-  background: -webkit-gradient(
-    linear,left top,left bottom,
-    from(#d1d2d3),
-    to(#c1c2c3)
-  );
+  @include background-image(linear-gradient(#d1d2d3, #c1c2c3));
 }
 
-
-section{
+.cst{
   border-bottom:1px solid #e7e8e9;
   border-top:1px solid #fff;
   padding:10px 0 10px 0;
   overflow: hidden;
   background:url("../img/arw@2x.png") no-repeat right center;
-  background-size:16px 16px;
-  width: 100%; /* for ie6 */
+  @include background-size(16px 16px);
+    .in{
+      margin-left:70px;
+    }
 }
 
-section img{
+.icon{
   float:left;
+  width:50px;
   margin:0 10px;
-  border-radius:10px;
+  @include border-radius(16px);
   border:1px solid #e7e8e9;
 }
 
 @media(min-width: 800px) {
-  section img{
-    width: 80px;
+  .icon{
+    width:72px;
   }
 }
 
-.caset{
-  margin-left:70px;
-}
-
-section p{
+.appDetail{
   margin:5px 0 0;
   line-height:1;
   font-size:12px;
@@ -209,67 +234,13 @@ section p{
   .target { margin-bottom: 90px; } 
 }
 
-.recomend a{
-  text-decoration:none;
-}
-
-.recomend section{
-  background:none;
-}
-
-/**/
-
-.wrapper{
-  width:100%;
-  position:relative;
-  top:0;
-  left:-250px;
-}
-
-.universalMenu{
-  background-color: #333;
-  width:250px;
-  overflow-y:auto;
-  color:#fff;
-}
-
-.universalMenu ul{
-  margin:0 10px;
-  padding:0;
-  list-style:none;
-}
-
-.universalMenu li{
-  padding:10px 0 10px 25px;
-  font-size:16px;
-  font-weight:bold;
-  text-shadow: 0 -1px 0 #000;
-  background:url("../img/btn_select_off@2x.png") no-repeat left 10px;
-  background-size:20px 20px;
-}
-
-.universalMenu li.currentU{
-  background:url("../img/btn_select_on@2x.png") no-repeat left 10px;
-  background-size:20px 20px;
-}
-
-.genreChanger{
-  margin:5px 10px 0;
-  width:210px;
-  padding:3px;
-}
-
-.Uad{
-  padding-top:10px;
-}
-
 /**/
 .loading{
   width:100%;
   text-align:center;
   padding:50px 0;
   background:url("../img/loading@2x.gif") no-repeat center center;
-  background-size:24px 24px;
+  @include background-size(24px 24px);
 }
 
 .ad320{
@@ -277,33 +248,7 @@ section p{
   min-height: 50px;
   position: fixed;
   text-align: center;
-  right: 0;
   left: 0;
   bottom: 0;
   background-color: rgba(0,0,0,0.8);
-}
-
-.qr { 
-  display: none;
-}
-
-@media(min-width: 800px) {
-  .qr {
-    position: fixed;
-    bottom: 100px;
-    right: 40px;
-    border-radius: 5px;
-    border:1px solid #ccc;
-    text-align: center;
-    background-color: #fff;
-    z-index: 10;
-    display: block;
-    color: #09c;
-    padding: 8px;
-  }
-  p{
-    margin: 0;
-    padding: 0;
-    font-size: 14px;
-  }
 }

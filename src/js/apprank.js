@@ -28,10 +28,10 @@ function core(){
 		for(var i = 0; i < count; i++) {
 		$("#target").append(
 		"<a href='" + json.feed.entry[i]["id"]["label"] + '&at=11l4Yj' +//URL
-		"'><section id='t"+ parseInt(i+1)+"'><img src='" + json.feed.entry[i]["im:image"][2]["label"] +"' width='50' />" + //ランク
-		"<div class='caset'><h3>" + parseInt(i+1) + "位."  +//画像
+		"'><section id='t"+ parseInt(i+1)+"' class='cst'><img src='" + json.feed.entry[i]["im:image"][2]["label"] +"' class='icon' />" + //ランク
+		"<div class='in'><h3 class='h3appName'>" + parseInt(i+1) + "位."  +//画像
 		json.feed.entry[i]["im:name"]["label"] + 
-		"</h3><p>"+ json.feed.entry[i]["im:artist"]["label"] + "</p><p>"+ json.feed.entry[i]["im:price"]["label"] + "</p></div></section></a>");//名称
+		"</h3><p class='appDetail'>"+ json.feed.entry[i]["im:artist"]["label"] + "</p><p class='appDetail'>"+ json.feed.entry[i]["im:price"]["label"] + "</p></div></section></a>");//名称
 		}
     },
     error:function(){}
@@ -84,19 +84,19 @@ var flag = "OFF";
 function switcher(){					  
 	
 	if(flag == "OFF"){
-		$("#wrapper").css("height", $(window).height());
-		$("#universalMenu").css("height", $(window).height());
+		$("#container").animate({"left": "0"}, 200);
+		$("#container").css("height", $(window).height()-50);
+		$("#universalMenu").css("height", $(window).height()-50);
 		$("body").css("width", $(window).width());
-		$("#wrapper").css("overflow","hidden");
+		$("#container").css("overflow","hidden");
 		flag = "ON";
-		$("#wrapper").animate({"left": "0"}, 200);
 	}else if(flag == "ON"){
-		$("#wrapper").css("height", "");
+		$("#container").css("height", "");
 		$("body").css("width", "100%");
-		$("#wrapper").css("overflow-y","");
-		$("#wrapper").css("overflow-x","");
+		$("#container").css("overflow-y","");
+		$("#container").css("overflow-x","");
 		flag = "OFF";
-		$("#wrapper").animate({"left": "-250px"}, 200);
+		$("#container").animate({"left": "-250px"}, 200);
 	}
 	
 };
@@ -169,10 +169,3 @@ core();
 //
 
 });
-
-<!-- 入力欄非表示 script -->
-/*
-window.onload = function(){
-	setTimeout(function(){window.scrollTo(0,1);},100);
-}
-*/
