@@ -4,7 +4,7 @@ module.exports = (grunt)->
 
     uglify:
       typesc:
-        files: 'public/js/apprank.js': ['public/js/apprank.js']
+        files: 'public/js/apprank.min.js': ['public/js/apprank.js']
 
     concat:
       typesc:
@@ -39,7 +39,7 @@ module.exports = (grunt)->
           options:
             atBegin: true
 
-    clean: ['public/js/*.js']
+    clean: ['src/**/*.js']
 
   })
 
