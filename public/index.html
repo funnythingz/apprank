@@ -90,13 +90,12 @@
 
 <div class="contents">
   <ul id="countryList" class="countryList">
-  <li id="jp" class="current">JP</li>
-  <li id="us">US</li>
-  <li id="uk">UK</li>
-  <li id="cn">CN</li>
-  <li id="kr">KR</li>
+  <li id="jp" class="current" onClick="javascript: _gaq.push(['_trackEvent','coutryJP', 'click', 'coutryJP'])">JP</li>
+  <li id="us" onClick="javascript: _gaq.push(['_trackEvent','coutryUS', 'click', 'coutryUS'])">US</li>
+  <li id="uk" onClick="javascript: _gaq.push(['_trackEvent','coutryUK', 'click', 'coutryUK'])">UK</li>
+  <li id="cn" onClick="javascript: _gaq.push(['_trackEvent','coutryCN', 'click', 'coutryCN'])">CN</li>
+  <li id="kr" onClick="javascript: _gaq.push(['_trackEvent','coutryKR', 'click', 'coutryKR'])">KR</li>
   </ul>
-
   <h2 class="h2tl"><span id="feedName">トップセールス</span>：<span id="categolyName"></span></h2>
   <!-- Recomend -->
   <div class="recomend">
@@ -110,20 +109,12 @@
     </a>
   </div>
   <!-- Recomend -->
-
   <div id="loading" class="loading"></div>
   <div id="target" class="target"></div>
-  <!-- <div class="qr"><p>AppRank[スマホ用]</p><img src="img/qr.png" width="150px"></div> -->
-
 </div>
 
 
 <div class="ad320">
-<style>
-.apprank-responsive { width: 320px; height: 50px; }
-@media(min-width: 500px) { .apprank-responsive { width: 468px; height: 60px; } }
-@media(min-width: 800px) { .apprank-responsive { width: 728px; height: 90px; } }
-</style>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- apprank-responsive -->
 <ins class="adsbygoogle apprank-responsive"

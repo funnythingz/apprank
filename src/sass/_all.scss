@@ -119,13 +119,14 @@ a{
 /* Headline */
 
 .h2tl{
-  @include background-image(linear-gradient(#f7f8f9, #eee));
   font-size:12px;
   font-weight:bold;
   border-top:1px solid #fff;
   border-bottom:1px solid #ddd;
   padding:8px 10px;
   margin:0;
+  @include background-image(linear-gradient(#f7f8f9, #eee));
+
 }
 
 .h3appName{
@@ -139,13 +140,6 @@ a{
   margin:0;
   padding:0;
   font-weight:bold;
-}
-
-@media(min-width: 800px) {
-  .appName{
-    font-size:120%;
-    width:50%;
-  }
 }
 
 /* Contents */
@@ -210,13 +204,6 @@ a{
   border:1px solid #e7e8e9;
 }
 
-@media(min-width: 800px) {
-  .icon{
-    width:72px;
-    @include border-radius(16px);
-  }
-}
-
 .appDetail{
   margin:5px 0 0;
   line-height:1;
@@ -228,14 +215,6 @@ a{
   margin-bottom: 50px;
 }
 
-@media(min-width: 500px) { 
-  .target { margin-bottom: 60px; } 
-}
-
-@media(min-width: 800px) {
-  .target { margin-bottom: 90px; } 
-}
-
 /**/
 .loading{
   width:100%;
@@ -243,6 +222,10 @@ a{
   padding:50px 0;
   background:url("../img/loading@2x.gif") no-repeat center center;
   @include background-size(24px 24px);
+}
+
+.apprank-responsive {
+  width: 320px; height: 50px;
 }
 
 .ad320{
